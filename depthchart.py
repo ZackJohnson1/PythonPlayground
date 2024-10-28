@@ -151,6 +151,13 @@ class DepthChart:
                 player = self.depth_chart[pos][i] if i < len(self.depth_chart[pos]) else "[Position not filled]"
                 print(f"  {pos}: {player}")
 
+        # Special Teams
+        special_teams_positions = ['K', 'P', 'KR', 'PR']
+        print("\nSpecial Teams:")
+        for pos in special_teams_positions:
+            player = self.depth_chart[pos][0] if len(self.depth_chart[pos]) > 0 else "[Position not filled]"
+            print(f"  {pos}: {player}")
+
 
 def menu():
     depth_chart = DepthChart()
